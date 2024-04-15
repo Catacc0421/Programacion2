@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="584.0" prefWidth="898.0" spacing="30.0" style="-fx-padding: 30; -fx-background-color: #E0FFFF;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.banco.controlador.PanelClienteControlador">
+
+    <children>
+        <Pane prefHeight="55.0" prefWidth="739.0">
+            <children>
+                <Label layoutX="250.0" layoutY="9.0" prefHeight="38.0" prefWidth="338.0" text="Panel principal de administración">
+                    <font>
+                        <Font name="System Italic" size="22.0" />
+                    </font>
+                </Label>
+                <MenuButton layoutX="705.0" layoutY="15.0" mnemonicParsing="false" text="Menu">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#irActualizar" text="Actualizar datos" />
+                        <MenuItem mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesión">
+                        </MenuItem>
+                    </items>
+                </MenuButton>
+            </children>
+        </Pane>
+
+        <HBox spacing="20.0">
+            <Label fx:id="usuarioLabel" text="Usuario bienvenido al banco fortuna, aquí podrá ver sus transacciones">
+                <font>
+                    <Font size="13.0" />
+                </font>
+            </Label>
+
+            <HBox alignment="TOP_RIGHT" spacing="10.0">
+                <Label text="                                               " />
+                <Label text="No. Cuenta: ">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+            </HBox>
+
+            <Label fx:id="cuentaLabel" prefHeight="18.0" prefWidth="98.0" text="000">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Label>
+        </HBox>
+
+        <TableView fx:id="tableAdministracion" prefHeight="297.0" prefWidth="739.0" style="-fx-background-color: #FFFFFF;">
+            <columns>
+                <TableColumn fx:id="tcTipo" prefWidth="186.4000037908554" text="Tipo" />
+                <TableColumn fx:id="tcFecha" prefWidth="164.7999725341797" text="Fecha" />
+                <TableColumn fx:id="tcValor" prefWidth="160.80001831054688" text="Valor" />
+                <TableColumn fx:id="tcUsuario" prefWidth="148.79998779296875" text="Usuario" />
+                <TableColumn fx:id="tcCategoria" prefWidth="173.5999755859375" text="Categoría" />
+            </columns>
+        </TableView>
+
+        <HBox alignment="CENTER" focusTraversable="true" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+            <children>
+                <Button minHeight="40.0" minWidth="130.0" mnemonicParsing="false" onAction="#consultar" style="-fx-background-color: #00807a;" text="Consultar" textFill="WHITE" />
+                <Button minHeight="40.0" minWidth="130.0" mnemonicParsing="false" onAction="#irTransferir" style="-fx-background-color: #00807a;" text="Transferir" textFill="WHITE" />
+            </children>
+        </HBox>
+
+    </children>
+</VBox>
